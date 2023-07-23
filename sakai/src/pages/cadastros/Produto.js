@@ -13,6 +13,7 @@ import { CategoriaService } from '../../service/cadastros/CategoriaService';
 import { Dropdown } from 'primereact/dropdown';
 import { InputTextarea } from 'primereact/inputtextarea';
 import { InputNumber } from 'primereact/inputnumber';
+import { Link } from 'react-router-dom';
 
 
 
@@ -166,6 +167,7 @@ const Produto = () => {
     const actionBodyTemplate = (rowData) => {
         return (
             <div className="actions">
+                <Link to={{pathname:'/produtoImagens/'+rowData.id}}> <Button icon="pi pi-image" className="p-button-rounded p-button-primary mr-2" /> </Link>
                 <Button icon="pi pi-pencil" className="p-button-rounded p-button-success mr-2" onClick={() => editObjeto(rowData)} />
                 <Button icon="pi pi-trash" className="p-button-rounded p-button-warning mt-2" onClick={() => confirmDeleteObjeto(rowData)} />
             </div>

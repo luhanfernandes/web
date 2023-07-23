@@ -53,6 +53,8 @@ import './assets/demo/flags/flags.css';
 import './assets/demo/Demos.scss';
 import './assets/layout/layout.scss';
 import './App.scss';
+import ProdutoImagens from './pages/cadastros/ProdutoImagens';
+import Login from './pages/Login';
 
 
 const App = () => {
@@ -317,8 +319,9 @@ const App = () => {
         'layout-theme-light': layoutColorMode === 'light'
     });
 
-    return (
-        <div className={wrapperClass} onClick={onWrapperClick}>
+    const Pagina = () =>{
+        return (
+            <div className={wrapperClass} onClick={onWrapperClick}>
             <Tooltip ref={copyTooltipRef} target=".block-action-copy" position="bottom" content="Copied to clipboard" event="focus" />
 
             <AppTopbar onToggleMenuClick={onToggleMenuClick} layoutColorMode={layoutColorMode}
@@ -360,6 +363,8 @@ const App = () => {
                     <Route path="/produtos" component={Produto} />
                     <Route path="/permissoes" component={Permissao} />
                     <Route path="/pessoas" component={Pessoa} />
+                    <Route path="/produtoImagens/:id" component={ProdutoImagens} />
+                    <Route path="/login" component={Login} />
 
                 </div>
 
@@ -373,6 +378,18 @@ const App = () => {
                 <div className="layout-mask p-component-overlay"></div>
             </CSSTransition>
 
+        </div>
+        );
+    }
+
+    return (
+        <div>
+        {
+            false ?
+            <Pagina/>
+            :
+            <Login/>
+        }
         </div>
     );
 
