@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.ifpe.web.dto.PessoaClienteRequestDTO;
 import com.ifpe.web.entity.Pessoa;
 import com.ifpe.web.service.PessoaService;
 
@@ -31,9 +32,16 @@ public class PessoaController {
        return pessoaService.buscarTodos();
     }
 
+    /* 
     @PostMapping("/")
     public Pessoa inserir(@RequestBody Pessoa objeto){
         return pessoaService.inserir(objeto);
+    }
+    */
+
+    @PostMapping("/")
+    public Pessoa inserir(@RequestBody Pessoa pessoa){
+        return pessoaService.registrar(pessoa);
     }
 
     @PutMapping("/")
