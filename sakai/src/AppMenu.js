@@ -109,9 +109,9 @@ export const AppMenu = (props) => {
     return (
         <div className="layout-menu-container">
             <AppSubmenu items={props.model} className="layout-menu"  onMenuItemClick={props.onMenuItemClick} root={true} role="menu" />
-            <a href="https://www.primefaces.org/primeblocks-react" className="block mt-3">
-                <img alt="primeblocks" className="w-full"
-                     src={props.layoutColorMode === 'light' ? 'assets/layout/images/banner-primeblocks.png' : 'assets/layout/images/banner-primeblocks-dark.png'}/>
+            <a href="https://www.adidas.com.br/" className="block mt-3">
+                <img alt="ifpe" className="w-full"
+                     src={props.layoutColorMode === 'light' ? 'assets/layout/images/adidas_logo.png' : 'assets/layout/images/ifpe_logo.png'}/>
             </a>
         </div>
     );

@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.ifpe.web.dto.PessoaClienteRequestDTO;
 import com.ifpe.web.entity.Pessoa;
 import com.ifpe.web.service.PessoaService;
 

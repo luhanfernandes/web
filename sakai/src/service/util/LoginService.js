@@ -24,6 +24,7 @@ autenticado(){
 
 sair(){
     localStorage.removeItem(this.CHAVE_TOKEN);
+    window.location.href = "/login";
 }
 
 getToken(){

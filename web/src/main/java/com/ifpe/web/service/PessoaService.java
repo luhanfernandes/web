@@ -51,8 +51,8 @@ public class PessoaService {
         //emailService.enviarEmailTexto(objetoNovo.getEmail(), "Cadastro na Loja Tabajara", "O registro na loja foi realizado com sucesso. Em breve você receberá a senha de acesso por e-mail!!");
         Map<String, Object> proprMap = new HashMap<>();
         proprMap.put("nome", objetoNovo.getNome());
-        proprMap.put("mensagem", "O registro na loja foi realizado com sucesso. Em breve você receberá a senha de acesso por e-mail!!");
-        emailService.enviarEmailTemplate(objetoNovo.getEmail(), "Cadastro na Loja Tabajara", proprMap);
+        proprMap.put("mensagem", "Seu registo foi realizado no nosso sistema. Para ter acesso a plataforma, por favor, contate o gestor.");
+        emailService.enviarEmailTemplate(objetoNovo.getEmail(), "Cadastro Adidas", proprMap);
         return objetoNovo;
     }
 }
